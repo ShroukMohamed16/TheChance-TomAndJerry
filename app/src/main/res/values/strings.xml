@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TomAndJerry</string>
+    <string name="cheeses">cheeses</string>
+    <string name="buy_1_tom_and_get_2_for_free">Buy 1 Tom and get 2 for free</string>
+    <string name="adopt_tom_free_fail_free_guarantee">Adopt Tom! (Free Fail-Free Guarantee)</string>
+    <string name="cheap_tom_section">Cheap tom section</string>
+    <string name="view_all">view all</string>
+    <string name="tom_settings">Tom settings</string>
+    <string name="his_favorite_foods">His favorite foods</string>
+</resources>
