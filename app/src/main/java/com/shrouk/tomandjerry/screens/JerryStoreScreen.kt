@@ -56,7 +56,7 @@ import com.shrouk.tomandjerry.ui.theme.primaryColor
 import com.shrouk.tomandjerry.ui.theme.screenBackground
 import com.shrouk.tomandjerry.ui.theme.titleColor
 
-@Preview(showSystemUi = true, name = "Phone", device = "id:Nexus S")
+@Preview(showSystemUi = true, name = "Phone", device = "id:pixel_4_xl")
 @Preview(showSystemUi = true, name = "Tablet", device = "spec:width=800dp,height=1280dp")
 @Preview(name = "Phone", widthDp = 360, heightDp = 640)
 @Composable

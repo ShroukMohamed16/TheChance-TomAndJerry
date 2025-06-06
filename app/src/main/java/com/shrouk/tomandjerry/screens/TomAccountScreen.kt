@@ -61,7 +61,7 @@ data class StatItem(
 )
 
 
-@Preview(name = "Phone", widthDp = 360, heightDp = 640)
+@Preview(name = "Phone", widthDp = 360, heightDp = 640, device = "id:pixel_4_xl")
 @Composable
 fun TomAccountScreen() {
     LazyColumn(

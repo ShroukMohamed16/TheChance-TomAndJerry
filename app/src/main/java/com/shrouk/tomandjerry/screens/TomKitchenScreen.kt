@@ -74,9 +74,7 @@ fun TomKitchenScreen() {
                     MealContainer()
                     Column(
                         Modifier
-
                             .fillParentMaxSize()
-
                             .graphicsLayer {
                                 translationY = -30f
                             }

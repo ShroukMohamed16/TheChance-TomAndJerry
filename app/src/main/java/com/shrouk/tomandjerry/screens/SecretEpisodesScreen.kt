@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -105,7 +106,7 @@ fun SecretEpisodesScreen() {
                     MostWatchedCard(
                         mostWatchEpisodes[it],
                         minLinesMostWatchEpisode,
-                        Modifier.fillParentMaxWidth(0.7f)
+                        Modifier.fillParentMaxWidth(0.65f)
                     )
                 }
             }
@@ -190,7 +191,7 @@ fun MostWatchedCard(
             contentDescription = "",
             modifier = Modifier
                 .fillMaxWidth()
-                .aspectRatio(.8f),
+                .aspectRatio(.7f),
             contentScale = ContentScale.Crop
         )
         Box(
@@ -239,14 +240,15 @@ fun MostWatchedCard(
 fun PopularCharacterCard(popularCharacter: PopularCharacter, modifier: Modifier = Modifier) {
     Box(
         modifier
-
+            .width(140.dp)
             .padding(top = 32.dp)
             .padding(start = 16.dp)
             .background(
                 color = popularCharacter.cardColor,
                 shape = RoundedCornerShape(16.dp)
             )
-            .padding(16.dp)
+            .padding( 16.dp)
+
 
 
     ) {
@@ -261,9 +263,9 @@ fun PopularCharacterCard(popularCharacter: PopularCharacter, modifier: Modifier 
             Image(
                 painter = painterResource(popularCharacter.image),
                 modifier = Modifier
-                    .size(100.dp)
+                    .height(64.dp)
                     .align(Alignment.TopCenter),
-                contentScale = ContentScale.FillBounds,
+                contentScale = ContentScale.Crop,
 
                 contentDescription = ""
             )
@@ -274,7 +276,7 @@ fun PopularCharacterCard(popularCharacter: PopularCharacter, modifier: Modifier 
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(Modifier.height(20.dp))
+            Spacer(Modifier.height(8.dp))
 
             Text(
                 popularCharacter.name,
@@ -283,6 +285,7 @@ fun PopularCharacterCard(popularCharacter: PopularCharacter, modifier: Modifier 
                 textAlign = TextAlign.Center,
                 fontFamily = IBMPlexSans,
                 letterSpacing = .25.sp,
+                maxLines = 1,
                 color = titleColor.copy(alpha = 0.87f)
             )
             Text(
@@ -291,6 +294,7 @@ fun PopularCharacterCard(popularCharacter: PopularCharacter, modifier: Modifier 
                 fontWeight = FontWeight.Normal,
                 textAlign = TextAlign.Center,
                 fontFamily = IBMPlexSans,
+                maxLines = 1,
                 color = titleColor.copy(alpha = 0.60f)
             )
         }
